@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { AuroraBackground } from "@/components/ui/aurora-background"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,12 +19,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
-          disableTransitionOnChange>{children}
+          disableTransitionOnChange>
+          <AuroraBackground>
+            {children}
+          </AuroraBackground>
         </ThemeProvider>
+
       </body>
     </html>
   );
