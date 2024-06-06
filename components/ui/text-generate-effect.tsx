@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/utils/cn";
 
+
 export const TextGenerateEffect = ({
     words,
     className,
@@ -19,11 +20,11 @@ export const TextGenerateEffect = ({
         animate(
             "span",
             {
-                opacity: 1,
+                opacity: .8,
             },
             {
                 duration: 2,
-                delay: stagger(0.2),
+                delay: stagger(0.3),
             }
         );
     }, [scope.current]);
@@ -36,7 +37,7 @@ export const TextGenerateEffect = ({
                         <motion.span
                             key={word + idx}
                             // In order to change accent color and the accented word change the line below:
-                            className={`${idx > 1 ? 'text-purple' : 'dark:text-white text-black '} opacity-0`}
+                            className={`${idx > 3 ? 'text-purple' : 'dark:text-white text-black '} opacity-0`}
                         >
                             {word}{" "}
                         </motion.span>
@@ -48,7 +49,7 @@ export const TextGenerateEffect = ({
 
     return (
         <div className={cn("font-bold", className)}>
-            <div className="mt-4">
+            <div className="my-4">
                 <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
                     {renderWords()}
                 </div>
