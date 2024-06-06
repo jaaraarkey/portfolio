@@ -1,4 +1,6 @@
-My personal web portfolio. 
+My personal web portfolio.
+Created on React/Next.js framework.
+Styled with Tailwind.
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Learn Next.js](https://nextjs.org/learn)
