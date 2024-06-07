@@ -37,7 +37,7 @@ export const TextGenerateEffect = ({
                         <motion.span
                             key={word + idx}
                             // In order to change accent color and the accented word change the line below:
-                            className={`${idx > 3 ? 'text-purple' : 'dark:text-white text-black '} opacity-0`}
+                            className={`${idx > 1 ? 'text-violet-300' : 'dark:text-white text-black '} opacity-0`}
                         >
                             {word}{" "}
                         </motion.span>
@@ -48,9 +48,9 @@ export const TextGenerateEffect = ({
     };
 
     return (
-        <div className={cn("font-bold", className)}>
+        <div className={cn("font-normal", className)}>
             <div className="my-4">
-                <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
+                <div className=" dark:text-white text-black text-6xl font-bold leading-snug tracking-wide">
                     {renderWords()}
                 </div>
             </div>

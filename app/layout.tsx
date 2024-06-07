@@ -19,13 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        {/* <AuroraBackground> */}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
-          enableSystem
+          // enableSystem
           disableTransitionOnChange>
-          <AuroraBackground>{children}</AuroraBackground>
+          {children}
         </ThemeProvider>
+        {/* </AuroraBackground> */}
       </body>
     </html>
   );
